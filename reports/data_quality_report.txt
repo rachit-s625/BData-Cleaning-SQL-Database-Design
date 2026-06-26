@@ -1,0 +1,144 @@
+==================================================
+          DATA QUALITY & INGESTION REPORT         
+==================================================
+
+File: 01_fund_master.csv
+  Shape: (40, 15)
+  Duplicates: 0
+  Columns & Types:
+    - amfi_code (int64): 0 missing values
+    - fund_house (object): 0 missing values
+    - scheme_name (object): 0 missing values
+    - category (object): 0 missing values
+    - sub_category (object): 0 missing values
+    - plan (object): 0 missing values
+    - launch_date (object): 0 missing values
+    - benchmark (object): 0 missing values
+    - expense_ratio_pct (float64): 0 missing values
+    - exit_load_pct (float64): 0 missing values
+    - min_sip_amount (int64): 0 missing values
+    - min_lumpsum_amount (int64): 0 missing values
+    - fund_manager (object): 0 missing values
+    - risk_category (object): 0 missing values
+    - sebi_category_code (object): 0 missing values
+
+File: 02_nav_history.csv
+  Shape: (46000, 3)
+  Duplicates: 0
+  Columns & Types:
+    - amfi_code (int64): 0 missing values
+    - date (object): 0 missing values
+    - nav (float64): 0 missing values
+
+File: 03_aum_by_fund_house.csv
+  Shape: (90, 5)
+  Duplicates: 0
+  Columns & Types:
+    - date (object): 0 missing values
+    - fund_house (object): 0 missing values
+    - aum_lakh_crore (float64): 0 missing values
+    - aum_crore (int64): 0 missing values
+    - num_schemes (int64): 0 missing values
+
+File: 04_monthly_sip_inflows.csv
+  Shape: (48, 6)
+  Duplicates: 0
+  Columns & Types:
+    - month (object): 0 missing values
+    - sip_inflow_crore (int64): 0 missing values
+    - active_sip_accounts_crore (float64): 0 missing values
+    - new_sip_accounts_lakh (float64): 0 missing values
+    - sip_aum_lakh_crore (float64): 0 missing values
+    - yoy_growth_pct (float64): 12 missing values
+
+File: 05_category_inflows.csv
+  Shape: (144, 3)
+  Duplicates: 0
+  Columns & Types:
+    - month (object): 0 missing values
+    - category (object): 0 missing values
+    - net_inflow_crore (float64): 0 missing values
+
+File: 06_industry_folio_count.csv
+  Shape: (21, 6)
+  Duplicates: 0
+  Columns & Types:
+    - month (object): 0 missing values
+    - total_folios_crore (float64): 0 missing values
+    - equity_folios_crore (float64): 0 missing values
+    - debt_folios_crore (float64): 0 missing values
+    - hybrid_folios_crore (float64): 0 missing values
+    - others_folios_crore (float64): 0 missing values
+
+File: 07_scheme_performance.csv
+  Shape: (40, 19)
+  Duplicates: 0
+  Columns & Types:
+    - amfi_code (int64): 0 missing values
+    - scheme_name (object): 0 missing values
+    - fund_house (object): 0 missing values
+    - category (object): 0 missing values
+    - plan (object): 0 missing values
+    - return_1yr_pct (float64): 0 missing values
+    - return_3yr_pct (float64): 0 missing values
+    - return_5yr_pct (float64): 0 missing values
+    - benchmark_3yr_pct (float64): 0 missing values
+    - alpha (float64): 0 missing values
+    - beta (float64): 0 missing values
+    - sharpe_ratio (float64): 0 missing values
+    - sortino_ratio (float64): 0 missing values
+    - std_dev_ann_pct (float64): 0 missing values
+    - max_drawdown_pct (float64): 0 missing values
+    - aum_crore (int64): 0 missing values
+    - expense_ratio_pct (float64): 0 missing values
+    - morningstar_rating (int64): 0 missing values
+    - risk_grade (object): 0 missing values
+
+File: 08_investor_transactions.csv
+  Shape: (32778, 13)
+  Duplicates: 0
+  Columns & Types:
+    - investor_id (object): 0 missing values
+    - transaction_date (object): 0 missing values
+    - amfi_code (int64): 0 missing values
+    - transaction_type (object): 0 missing values
+    - amount_inr (int64): 0 missing values
+    - state (object): 0 missing values
+    - city (object): 0 missing values
+    - city_tier (object): 0 missing values
+    - age_group (object): 0 missing values
+    - gender (object): 0 missing values
+    - annual_income_lakh (float64): 0 missing values
+    - payment_mode (object): 0 missing values
+    - kyc_status (object): 0 missing values
+
+File: 09_portfolio_holdings.csv
+  Shape: (322, 8)
+  Duplicates: 0
+  Columns & Types:
+    - amfi_code (int64): 0 missing values
+    - stock_symbol (object): 0 missing values
+    - stock_name (object): 0 missing values
+    - sector (object): 0 missing values
+    - weight_pct (float64): 0 missing values
+    - market_value_cr (float64): 0 missing values
+    - current_price_inr (float64): 0 missing values
+    - portfolio_date (object): 0 missing values
+
+File: 10_benchmark_indices.csv
+  Shape: (8050, 3)
+  Duplicates: 0
+  Columns & Types:
+    - date (object): 0 missing values
+    - index_name (object): 0 missing values
+    - close_value (float64): 0 missing values
+
+==================================================
+          CROSS-DATASET VALIDATIONS               
+==================================================
+
+AMFI Code Consistency:
+  Codes in Fund Master: 40
+  Codes in NAV History: 40
+  Fund Master codes missing from NAV History: []
+  NAV History codes missing from Fund Master: 0 codes (total)

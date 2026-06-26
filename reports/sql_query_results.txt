@@ -1,0 +1,143 @@
+==================================================
+-- 10 SQL Analytical Queries for Bluestock Mutual Fund Platform
+==================================================
+amfi_code	scheme_name	fund_house	category	aum_crore
+148568	Mirae Asset Emerging Bluechip Fund - Regular - Growth	Mirae Asset MF	Large & Mid Cap	49046.0
+120842	Kotak Emerging Equity Fund - Regular - Growth	Kotak Mahindra MF	Mid Cap	47469.0
+118634	Nippon India Small Cap Fund - Regular - Growth	Nippon India MF	Small Cap	43630.0
+149322	DSP Top 100 Equity Fund - Regular - Growth	DSP Mutual Fund	Large Cap	41828.0
+102886	UTI Mid Cap Fund - Regular - Growth	UTI Mutual Fund	Mid Cap	41728.0
+
+
+==================================================
+-- 2. Average NAV per month for HDFC Top 100 (amfi_code 125497)
+==================================================
+amfi_code	month	avg_nav
+125497	2022-01	645.57408
+125497	2022-02	649.5862500000001
+125497	2022-03	642.0500258064517
+125497	2022-04	643.5234066666667
+125497	2022-05	638.5976516129033
+125497	2022-06	642.11599
+125497	2022-07	640.5092903225807
+125497	2022-08	637.8057774193549
+125497	2022-09	638.4584033333334
+125497	2022-10	638.6311032258064
+... and 50 more rows
+
+
+==================================================
+-- 3. Highest 3-Year CAGR funds
+==================================================
+amfi_code	scheme_name	return_3yr_pct
+119598	SBI Small Cap Fund - Regular Plan - Growth	23.39
+119599	SBI Small Cap Fund - Direct Plan - Growth	23.14
+101207	ABSL Small Cap Fund - Regular - Growth	22.38
+119095	Axis Small Cap Fund - Regular - Growth	20.98
+118634	Nippon India Small Cap Fund - Regular - Growth	20.15
+
+
+==================================================
+-- 4. Lowest expense ratio funds
+==================================================
+amfi_code	scheme_name	expense_ratio_pct
+118636	Nippon India Gilt Securities Fund - Regular - Growth	0.55
+100025	HDFC Short Term Debt Fund - Regular - Growth	0.56
+120844	Kotak Liquid Fund - Regular - Growth	0.6
+119552	SBI Bluechip Fund - Direct Plan - Growth	0.66
+118633	Nippon India Large Cap Fund - Direct - Growth	0.72
+
+
+==================================================
+-- 5. SIP YoY growth trend
+==================================================
+month	sip_inflow_crore	yoy_growth_pct
+2022-01	11517.0	None
+2022-02	11438.0	None
+2022-03	12328.0	None
+2022-04	11863.0	None
+2022-05	12286.0	None
+2022-06	12276.0	None
+2022-07	12140.0	None
+2022-08	12694.0	None
+2022-09	12976.0	None
+2022-10	13040.0	None
+... and 38 more rows
+
+
+==================================================
+-- 6. Investor count by state
+==================================================
+state	investor_count
+Punjab	394
+Tamil Nadu	381
+Madhya Pradesh	380
+West Bengal	375
+Gujarat	371
+Uttar Pradesh	369
+Delhi	367
+Telangana	363
+Haryana	363
+Rajasthan	356
+... and 2 more rows
+
+
+==================================================
+-- 7. Fund category performance (Average 3-Year Return and Sharpe Ratio)
+==================================================
+category	avg_return_3yr	avg_sharpe
+Small Cap	21.686666666666667	0.87
+Mid Cap	16.59	0.8714285714285713
+Flexi Cap	15.495000000000001	0.97
+Value	14.76	0.98
+Large & Mid Cap	14.56	0.91
+ELSS	13.58	0.8
+Large Cap	12.985714285714286	0.9278571428571428
+Index	12.1	0.93
+Index/ETF	11.77	0.91
+Short Duration	7.37	1.84
+... and 2 more rows
+
+
+==================================================
+-- 8. Portfolio sector allocation across all funds
+==================================================
+sector	total_weight
+Banking	652.26
+IT	455.47
+Pharma	407.45
+Automobile	323.65
+Utilities	265.54
+FMCG	229.11
+Infrastructure	192.16
+Diversified	169.23
+Telecom	145.62
+Consumer Goods	127.61
+... and 4 more rows
+
+
+==================================================
+-- 9. Transaction type distribution (count and total amount)
+==================================================
+transaction_type	tx_count	total_amount
+Lumpsum	3217	813153402.0
+Redemption	2007	500955479.0
+SIP	7824	87305309.0
+
+
+==================================================
+-- 10. Monthly AUM trend for top fund houses
+==================================================
+fund_house	date	aum_crore
+Aditya Birla Sun Life MF	2022-03-31	278000.0
+Aditya Birla Sun Life MF	2022-09-30	285000.0
+Aditya Birla Sun Life MF	2023-03-31	275000.0
+Aditya Birla Sun Life MF	2023-09-30	308000.0
+Aditya Birla Sun Life MF	2024-03-31	340000.0
+Aditya Birla Sun Life MF	2024-09-30	362000.0
+Aditya Birla Sun Life MF	2024-12-31	384000.0
+Aditya Birla Sun Life MF	2025-03-31	385000.0
+Aditya Birla Sun Life MF	2025-12-31	460000.0
+Axis Mutual Fund	2022-03-31	250000.0
+... and 80 more rows
+
