@@ -12,7 +12,7 @@ def build_scorecard(conn, processed_dir):
     
     # Load required data
     df_perf = pd.read_sql("SELECT * FROM fact_performance", conn)
-    df_fund = pd.read_sql("SELECT amfi_code, risk_category FROM dim_fund", conn)
+    df_fund = pd.read_sql("SELECT amfi_code, benchmark, risk_category FROM dim_fund", conn)
     
     df = pd.merge(df_perf, df_fund, on="amfi_code")
     
@@ -42,9 +42,9 @@ def build_scorecard(conn, processed_dir):
     
     # Save scorecard
     scorecard_cols = [
-        "amfi_code", "scheme_name", "fund_house", "category", "return_3yr_pct", 
-        "sharpe_ratio", "alpha", "expense_ratio_pct", "max_drawdown_pct", 
-        "risk_category", "composite_score", "rank"
+        "amfi_code", "scheme_name", "fund_house", "category", "plan", "benchmark",
+        "return_3yr_pct", "sharpe_ratio", "alpha", "expense_ratio_pct", "max_drawdown_pct", 
+        "std_dev_ann_pct", "risk_category", "composite_score", "rank"
     ]
     df_scorecard = df[scorecard_cols].sort_values("rank")
     df_scorecard.to_csv(os.path.join(processed_dir, "fund_scorecard.csv"), index=False)

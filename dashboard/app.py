@@ -254,8 +254,8 @@ elif page == "SIP & Market Trends":
     
     fig_dual.update_layout(
         title="SIP Inflows vs Nifty 50 Index Performance",
-        yaxis=dict(title="SIP Inflows (Rs. Crore)", titlefont=dict(color="#3B82F6"), tickfont=dict(color="#3B82F6")),
-        yaxis2=dict(title="Nifty 50 Index Value", titlefont=dict(color="#EF4444"), tickfont=dict(color="#EF4444"), overlaying="y", side="right"),
+        yaxis=dict(title=dict(text="SIP Inflows (Rs. Crore)", font=dict(color="#3B82F6")), tickfont=dict(color="#3B82F6")),
+        yaxis2=dict(title=dict(text="Nifty 50 Index Value", font=dict(color="#EF4444")), tickfont=dict(color="#EF4444"), overlaying="y", side="right"),
         legend=dict(x=0.01, y=0.99)
     )
     st.plotly_chart(fig_dual, use_container_width=True)
